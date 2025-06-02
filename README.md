@@ -1,16 +1,106 @@
-# todo_app
+# 📝 Flutter ToDo App
 
-A new Flutter project.
+A simple, lightweight ToDo app built with Flutter and powered by a local SQLite database using the `sqflite` package. This app allows users to add, mark, and delete tasks. Data is stored locally and persists between sessions.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+* Add new tasks via a dialog
+* Mark tasks as completed using a checkbox
+* Delete tasks with a long press
+* Local persistence using SQLite (`sqflite` package)
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Home Page                                                   | Add Task Dialog                                                     |
+| ----------------------------------------------------------- | ------------------------------------------------------------------- |
+| ![Home](https://via.placeholder.com/200x400?text=Home+Page) | ![Dialog](https://via.placeholder.com/200x400?text=Add+Task+Dialog) |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+*(Replace with real screenshots if needed)*
+
+## 📁 Project Structure
+
+```
+lib/
+├── main.dart
+├── models/
+│   └── task.dart
+├── servieces/
+│   └── database_serviece.dart
+└── homepage.dart
+```
+
+## 🧠 Data Model
+
+The app uses a `Task` model with the following fields:
+
+```dart
+class Task {
+  final int id;
+  final String content;
+  final int status; // 0 = Incomplete, 1 = Complete
+}
+```
+
+## 🛠 Technologies Used
+
+* **Flutter**
+* **SQLite** via `sqflite`
+* **Path Provider** via `path`
+
+## 🔧 How It Works
+
+* `DatabaseService` handles all database interactions.
+* On app start, tasks are loaded from the database.
+* Adding a task inserts a new row in the SQLite database.
+* Marking a task complete/incomplete updates the `status` field.
+* Long-pressing a task deletes it from the database.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Flutter SDK installed
+* An emulator or physical device
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/flutter-todo-app.git
+cd flutter-todo-app
+```
+
+2. Get dependencies:
+
+```bash
+flutter pub get
+```
+
+3. Run the app:
+
+```bash
+flutter run
+```
+
+## 📦 Dependencies
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.3.0
+  path: ^1.8.3
+```
+
+## ✅ To-Do (for improvement)
+
+* Add task due dates
+* Categorize tasks
+* Add task editing
+* Implement notification reminders
+
+
+---
+
+Let me know if you'd like a version of this with actual GitHub markdown badges, or want to include the model class `task.dart` as well.
