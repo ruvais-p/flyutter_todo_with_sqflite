@@ -9,14 +9,6 @@ A simple, lightweight ToDo app built with Flutter and powered by a local SQLite 
 * Delete tasks with a long press
 * Local persistence using SQLite (`sqflite` package)
 
-## 📱 Screenshots
-
-| Home Page                                                   | Add Task Dialog                                                     |
-| ----------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![Home](https://via.placeholder.com/200x400?text=Home+Page) | ![Dialog](https://via.placeholder.com/200x400?text=Add+Task+Dialog) |
-
-*(Replace with real screenshots if needed)*
-
 ## 📁 Project Structure
 
 ```
@@ -26,7 +18,8 @@ lib/
 │   └── task.dart
 ├── servieces/
 │   └── database_serviece.dart
-└── homepage.dart
+└──screens
+    └──homepage.dart
 ```
 
 ## 🧠 Data Model
