@@ -96,4 +96,3 @@ dependencies:
 
 ---
 
-Let me know if you'd like a version of this with actual GitHub markdown badges, or want to include the model class `task.dart` as well.
